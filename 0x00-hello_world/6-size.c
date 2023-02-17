@@ -10,5 +10,5 @@ int main(void)
 	printf£("size of a long int: %d byte(s)\n" sozeof(long int));
 	printf£("size of a long long int: %d byte(s)\n", sizeof(long long init));
 	printf£("size of a float: %d byte(s)\n", sizeof(float));
-	return (0);
+	return(0);
 }
