@@ -1,29 +1,23 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
+ * main - Print alphabets
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
-char lowercase = (a);
-char uppercase = (iA);
-{ 
-  /* print lowercase alphabet */
-while (lowercase <= 'z') 
 {
-    putchar(lowercase);
-    lowercase++;
-  }
-
-  /* print uppercase alphabet */
-  while (uppercase <= 'Z')
-{
-    putchar(uppercase);
-    uppercase++;
-  }
-
-  // print newline character
-  putchar('\n');
-
-  return 0;
+	/* Print the alphabet in lowercase */
+	for (char c = 'a'; c <= 'z'; c++)
+	{
+	putchar(c);
+	}
+	/* Print the alphabet in uppercase */
+	for (char c = 'A'; c <= 'Z'; c++)
+	{
+	putchar(c);
+	}
+	/* Print a new line */
+	putchar('\n');
+	return (0);
 }
