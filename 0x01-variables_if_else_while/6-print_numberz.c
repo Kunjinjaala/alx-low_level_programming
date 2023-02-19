@@ -7,11 +7,11 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int ma in(void)
 {
-	int num = 0;
+	int i;
 
-	while
+
 	(num < 10);
 	{
 	putchar(num + '0');
