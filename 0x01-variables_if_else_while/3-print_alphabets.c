@@ -3,21 +3,32 @@
 /**
  * main - Print alphabets
  *
+ * in lowercase and uppercase
+ *
  * Return: 0
  */
 int main(void)
 {
-	/* Print the alphabet in lowercase */
-	for (char c = 'a'; c <= 'z'; c++)
+	char lowercase = 'a';
+	char uppercase = 'A';
+
+	/* Print the alphabets in lowecase */
+
+	while (lowercase <= 'z')
 	{
-	putchar(c);
+	putchar(lowercase);
+	lowercase++;
 	}
 	/* Print the alphabet in uppercase */
-	for (char c = 'A'; c <= 'Z'; c++)
+
+	while (uppercase <= 'Z')
 	{
-	putchar(c);
+	putchar(uppercase);
+	uppercase++;
 	}
+
 	/* Print a new line */
+
 	putchar('\n');
 	return (0);
 }
