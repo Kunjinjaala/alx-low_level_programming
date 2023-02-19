@@ -1,22 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-int ma in(void)
+int main(void)
 {
 	int i;
 
-
-	(num < 10);
-	{
-	putchar(num + '0');
-	num++;
-	}
+	i = 0;
+	while
+		(i < 10)
+		{
+			putchar(i + '0');
+			i++;
+		}
 	putchar('\n');
 
 	return (0);
