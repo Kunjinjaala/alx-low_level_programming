@@ -1,11 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - print the size of various types
+ * main - Entry point
  *
- * Return: always 0
- *
+ * Return: Always 0 (Success)
  */
-int main (void)
+int main(void)
 {
-	printf("Size of a char: %d
+	int num = 0;
+
+	while
+	(num < 10);
+	{
+	putchar(num + '0');
+	num++;
+	}
+	putchar('\n');
+
+	return (0);
+}
