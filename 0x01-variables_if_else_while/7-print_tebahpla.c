@@ -3,13 +3,20 @@
 /**
  * main - initializing point
  *
- * Return: 0 success
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int i;
+	char c;
 
-	for (i = 'z'; i >= 'a'; i--)
+	c = 'z';
+
+	while
+		(c >= 'a')
+		{
+			putchar(c);
+				c--;
+		}
 
 	putchar('\n');
 
