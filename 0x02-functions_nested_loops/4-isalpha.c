@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * main - check the code.
+ * _isalpha - check the code for alphabetic characters.
  *
- * Return: Always 0.
+ *@c: the number to be checked.
+ *
+ * Return: 1 on success and 0 on anything else
  */
 
 int _isalpha(int c)
