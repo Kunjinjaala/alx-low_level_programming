@@ -5,9 +5,8 @@
 * Return: 0
 */
 
-int main(void)
+void print_times_table(int i)
 {
-	int i;
 
 	printf("Infinite loop incoming :(\n");
 
