@@ -7,7 +7,7 @@
  *
  * @src: Second string
  *
- * return: 0 for _string
+ * Return: A pointer to the destination string dest
  */
 
 char *_strcat(char *dest, char *src)
