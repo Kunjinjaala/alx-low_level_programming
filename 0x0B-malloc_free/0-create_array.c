@@ -4,6 +4,10 @@
 /**
  * create_array - Creates an array of chars
  *
+ * @size: Size of integer
+ *
+ * @c: Character
+ *
  * Return: NULL if size = 0
  */
 
