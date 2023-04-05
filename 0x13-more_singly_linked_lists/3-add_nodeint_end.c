@@ -10,28 +10,28 @@
  * Return: the address of the new element, or NULL if it failed
  */
 
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new, *temp;	
+	listint_t *new_node, *temp;
 
-	new = malloc(sizeof(listint_t));
-	while (new == NULL)
+	new_node = malloc(sizeof(listint_t));
+	while (new_node == NULL)
 		return (NULL);
 
-	new->n = n;
-	new->next = NULL;
+	new_node->n = n;
+	new_node->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = new_node;
+		return (new_node);
 	}
 
 	temp = *head;
 	while (temp->next != NULL)
 		temp = temp->next;
 
-	temp->next = new;
-	
-	return (new);
+	temp->next = new_node;
+
+	return (new_node);
 }

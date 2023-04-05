@@ -8,17 +8,19 @@
  *
  * @index: index of the node to retrieve, starting at 0
  *
- * Return: pointer to the nth node, or NULL if the node does not exist
+ * Return: pointer to the nth node, or NULL if the node
+ * does not exist
  */
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *node = head;
+	unsigned int x = 0;
 
-	if (current != NULL && index > 0)
+	while (node != NULL && x < index)
 	{
+		x++;
 		node = node->next;
-		index--;
 	}
 
 	return (node);
