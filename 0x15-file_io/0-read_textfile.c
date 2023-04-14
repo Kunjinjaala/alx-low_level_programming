@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
+
 
 /**
  * read_textfile- Read text file print to STDOUT.
@@ -12,32 +12,27 @@
  * Return: w- actual number of bytes read and printed
  * 0 when function fails or filename is NULL.
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
 	ssize_t t_read;
 	ssize_t t_w;
-	FILE *fp;
-
+	ssize_t fd;
 
 	if (filename == NULL)
 		return (0);
-	fp = fopen(filename, "r");
-
-	if (fp == NULL)
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
 		return (0);
 
-	buf = malloc(letters + 1);
+	buf = malloc(sizeof(char)*letters);
 
-	if (buf == NULL)
-	fclose(fp);
-	return (0);
-
-	t_read = fread(buf, 1, letters, fp);
+	t_read = read(fd, buf, letters);
 	buf[t_read] = '\0';
 
-	t_w = fwrite(buf, 1, t_read, stdout);
-	fclose(fp);
+	t_w = write(STDOUT_FILENO, buf, t_read);
+	close(fd);
 	free(buf);
 
 	return (t_w);
