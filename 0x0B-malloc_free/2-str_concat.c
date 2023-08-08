@@ -4,7 +4,7 @@
 /**
  * str_concat - get ends of input and add together for size
  *
- *@s1: input one to concat
+ * @s1: input one to concat
  *
  * @s2: input two to concat
  *
@@ -12,46 +12,38 @@
  */
 
 char *str_concat(char *s1, char *s2)
-{
-	char *conct;
+(
+	if (s1 == NULL) s1 = "";
+	if (s2 == NULL) s2 = "";
+	
+	size_t len_s1 = strlen(s1);
+	size_t len_s2 = strlen(s2);
 
-	int i, ci;
-
-	if (s1 == NULL)
-		s1 = "";
-
-	if (s2 == NULL)
-	{
-		s2 = "";
-		i = ci = 0;
-	}
-
-	while (s1[i] != '\0')
-		i++;
-
-	while (s2[ci] != '\0')
-		ci++;
-
-	conct = malloc(sizeof(char) * (i + ci + 1));
+	char *conct = (char *)malloc(len_s1 + len_s2 + 1);
 
 	if (conct == NULL)
 		return (NULL);
+	
+	strcpy(result, s1);
+	strcat(result, s2);
 
-	i = ci = 0;
+	return result;
+}
 
-	while (s1[i] != '\0')
-	{
-		conct[i] = s1[i];
-		i++;
-	}
+int main()
+{
+    char *s1 = "Hello, ";
+    char *s2 = "world!";
+    
+    char *concatenated = str_concat(s1, s2);
+    
+    if (concatenated != NULL)
+    {
+        printf("Concatenated string: %s\n", concatenated);
+        free(concatenated);
+    } else {
+        printf("Memory allocation failed.\n");
+    }
 
-	while (s2[ci] != '\0')
-	{
-		conct[i] = s2[ci];
-		i++, ci++;
-	}
-
-	conct[i] = '\0';
-
-	return (conct);
+    return 0;
 }
