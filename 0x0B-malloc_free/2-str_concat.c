@@ -27,18 +27,20 @@ char *str_concat(char *s1, char *s2)
 		a++;
 
 	while (s2[ab] != '\0')
-        	ab++;
+		ab++;
 
 	conct = (char *)malloc(sizeof(char) * (a + ab + 1));
 
 	if (conct == NULL)
-        	return (NULL);
+	return (NULL);
 
 	int i;
+
 	for (i = 0; i < a; i++)
-        	conct[i] = s1[i];
+		conct[i] = s1[i];
 
 	int j;
+
 	for (j = 0; j < ab; j++)
 		conct[a + j] = s2[j];
 
